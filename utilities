@@ -1,0 +1,44 @@
+import alpaca_trade_api as tradeapi
+    # api = tradeapi.REST('PK4KXXHCB3BZN0GTRS4A','ouw8mTxK1eYm7wmhItyrzcvxJ0SC1eSahxNXKwGx','https://paper-api.alpaca.markets')
+    # account = api.get_account()
+
+class portfolio:
+    def __init__(self, symbs, qtys,):
+        self.portfolio
+class trade:
+
+    def __init__(self, api, secret):
+        self.api = api
+        self.secret = secret
+        self.account = api.get_account()
+    def submit_order(self,
+                    symbol,
+                    qty,
+                    side,
+                    time_in_force,
+                    limit_price,
+                    stip_price,
+                    client_order_id,
+                    extended_hours,
+                    order_class,
+                    take_profit,
+                    stop_loss,
+                    trail_price,
+                    trail_percent,
+                    notional):
+        return self.tradeapi.submit_order(symbol, qty, side, time_in_force, limit_price, stip_price, client_order_id, extended_hours, order_class, take_profit, stop_loss, trail_price, trail_percent, notional)                   
+    
+    #Checks if account has trading ability
+    def check_acc_status(self):
+        if self.tradeapi.trading_blocked():
+            print('Account blocked.')
+        
+    #Check change in balance at market close
+    def balance_change():
+        balance_change = float(account.equity) - float(account.last_equity)
+        print(f'Today\'s portfolio balance change: ${balance_change}')
+
+
+class log:
+    def __init__(self,):
+        self.
